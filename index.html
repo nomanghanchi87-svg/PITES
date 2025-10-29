@@ -43,7 +43,7 @@
       <div class="grid">
         <div class="card">
           <h3>Network Setup & Management</h3>
-          <p>LAN, Wi‑Fi, VLAN, VPN, and network monitoring (Ubiquiti, MikroTik, Cisco).</p>
+          <p>LAN, Wi-Fi, VLAN, VPN, and network monitoring (Ubiquiti, MikroTik, Cisco).</p>
         </div>
         <div class="card">
           <h3>Hardware Support & Repairs</h3>
@@ -138,17 +138,12 @@
         </div>
         <div class="contact-card">
           <h3>Send a Message</h3>
-          <form action="https://formsubmit.co/nomanarif061@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" rows="4" placeholder="Message" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-
-  <!-- Hidden fields -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://nomanghanchi87-svg.github.io/PITES/thankyou.html">
-</form>
-
+          <form id="contactForm">
+            <input type="text" name="from_name" placeholder="Your name" required>
+            <input type="email" name="reply_to" placeholder="Your email" required>
+            <textarea name="message" rows="4" placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -159,6 +154,27 @@
       <p>© 2025 Professional IT Support & Equipment Supply (PITES). Made with care.</p>
     </div>
   </footer>
+
+  <!-- ✅ EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("lCckiajGRTOjEDzGf"); // Public Key
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_ejoffdb', 'template_7xxvybh', this)
+        .then(function() {
+          alert('✅ Your message has been sent successfully!');
+          document.getElementById("contactForm").reset();
+        }, function(error) {
+          alert('❌ Failed to send message. Please try again later.');
+          console.error('Error:', error);
+        });
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
