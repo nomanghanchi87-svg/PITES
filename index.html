@@ -3,51 +3,182 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You — PITES</title>
+  <title>Professional IT Support & Equipment Supply — PITES</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to right, #004aad, #007bff);
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    .thankyou-box {
-      background: rgba(255,255,255,0.1);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-    .thankyou-box h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-    .thankyou-box p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-    .btn {
-      background: white;
-      color: #004aad;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background: #f1f1f1;
-    }
-  </style>
 </head>
 <body>
-  <div class="thankyou-box">
-    <h1>✅ Thank You!</h1>
-    <p>Your message has been sent successfully. We’ll get back to you soon.</p>
-    <a href="index.html" class="btn">← Back to Home</a>
-  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">PITES</div>
+        <div class="tag">Professional IT Support & Equipment Supply</div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cta" onclick="scrollToSection('#contact')">Get Support</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero" aria-label="hero banner">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner animate-up">
+        <h1>Fast, reliable IT services across Pakistan and internationally</h1>
+        <p>Hardware, networking, CCTV, access control, backups and more.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#services">Our Services</a>
+          <a class="btn outline" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container section animate-up">
+      <h2>Our Services</h2>
+      <p class="lead">Comprehensive IT services and equipment supply for businesses and homes.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Network Setup & Management</h3>
+          <p>LAN, Wi-Fi, VLAN, VPN, and network monitoring (Ubiquiti, MikroTik, Cisco).</p>
+        </div>
+        <div class="card">
+          <h3>Hardware Support & Repairs</h3>
+          <p>PC/Laptop repairs, component replacement, upgrades, and diagnostics.</p>
+        </div>
+        <div class="card">
+          <h3>Server & Backup Solutions</h3>
+          <p>Local & cloud backups, NAS, and basic server maintenance.</p>
+        </div>
+        <div class="card">
+          <h3>Access Control & CCTV</h3>
+          <p>Access control systems (Suprema/Biostar), CCTV installation and setup.</p>
+        </div>
+        <div class="card">
+          <h3>Software Installation & Support</h3>
+          <p>OS installs, drivers, Office, antivirus and app troubleshooting.</p>
+        </div>
+        <div class="card">
+          <h3>Managed IT Services</h3>
+          <p>Ongoing support packages for small to large businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipment" class="section image-section">
+      <div class="container animate-up split">
+        <div class="text">
+          <h2>We Also Provide IT Equipment</h2>
+          <p>We supply and install laptops, printers, routers, CCTV cameras, access control systems and other IT equipment — delivery & installation available.</p>
+        </div>
+        <div class="imgwrap">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="IT equipment" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section animate-up">
+      <h2>About Tech Support Pakistan</h2>
+      <p>We are an experienced IT support and equipment provider serving clients across Pakistan and internationally. Our team delivers professional solutions for both homes and businesses.</p>
+      <div class="values">
+        <div class="value">
+          <h4>Mission</h4>
+          <p>To make IT reliable, efficient, and affordable for everyone.</p>
+        </div>
+        <div class="value">
+          <h4>Vision</h4>
+          <p>To be Pakistan’s most trusted IT support & equipment provider, serving both local and international clients.</p>
+        </div>
+        <div class="value">
+          <h4>Values</h4>
+          <p>Integrity, expertise, and customer satisfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="container section animate-up">
+      <h2>Client Reviews</h2>
+      <div class="reviews">
+        <blockquote>
+          <p>"Quick and reliable service — fixed our office network the same day."</p>
+          <cite>— Ali R.</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Professional team and excellent after-service support."</p>
+          <cite>— Sana K.</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Provided quality CCTV installation and supplied good equipment."</p>
+          <cite>— Omar L.</cite>
+        </blockquote>
+      </div>
+      <div class="review-form">
+        <h3>Submit a Review</h3>
+        <form id="reviewForm">
+          <input name="name" type="text" placeholder="Your name" required>
+          <textarea name="review" rows="3" placeholder="Your review" required></textarea>
+          <button type="submit" class="btn">Submit Review</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="container section animate-up">
+      <h2>Contact</h2>
+      <p class="lead">Get Support — Our Services</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Details</h3>
+          <p><strong>Phone:</strong> <a href="tel:+923112036265">0311-2036265</a></p>
+          <p><strong>Email:</strong> <a href="mailto:nomanghanchi87@gmail.com">nomanghanchi87@gmail.com</a></p>
+          <p><strong>Location:</strong> Pakistan (serving internationally)</p>
+          <p><strong>Review Us:</strong> We appreciate your feedback!</p>
+        </div>
+        <div class="contact-card">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <input type="text" name="from_name" placeholder="Your name" required>
+            <input type="email" name="reply_to" placeholder="Your email" required>
+            <textarea name="message" rows="4" placeholder="Message" required></textarea>
+            <input type="hidden" name="_next" value="https://nomanghanchi87-svg.github.io/PITES/thankyou.html">
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Professional IT Support & Equipment Supply (PITES). Made with care.</p>
+    </div>
+  </footer>
+
+  <!-- ✅ EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      // Initialize EmailJS with your Public Key
+      emailjs.init("QA7yd3i1KUPAnssMC");
+    })();
+
+    // Handle contact form submission
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_jqlzf92', 'template_hldhhmh', this)
+        .then(function() {
+          // Redirect to Thank You page after success
+          window.location.href = "https://nomanghanchi87-svg.github.io/PITES/thankyou.html";
+        }, function(error) {
+          alert('❌ Failed to send message. Please try again later.');
+          console.error('Error:', error);
+        });
+    });
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
